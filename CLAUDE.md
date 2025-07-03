@@ -1,9 +1,11 @@
 # Personal Finance App - Development Guidelines
 
 ## Project Overview
+
 A React-based personal finance application built with TypeScript, focusing on type safety, test-driven development, and maintainable code architecture.
 
 ## Technology Stack
+
 - **Frontend**: React 18+ with TypeScript
 - **Build Tool**: Vite
 - **Testing**: Vitest + React Testing Library
@@ -16,18 +18,21 @@ A React-based personal finance application built with TypeScript, focusing on ty
 ## Development Principles
 
 ### 1. Test-Driven Development (TDD)
+
 - Write tests BEFORE implementing features
 - Focus on testing behavior, not implementation details
 - Use the Red-Green-Refactor cycle
 - Maintain high test coverage (>90%)
 
 ### 2. Type Safety
+
 - Use strict TypeScript configuration
 - Define interfaces for all data structures
 - Avoid `any` type - use proper type definitions
 - Leverage TypeScript's advanced features (generics, discriminated unions, etc.)
 
 ### 3. Code Quality
+
 - Follow React best practices and hooks rules
 - Use functional components with hooks
 - Implement proper error boundaries
@@ -36,16 +41,17 @@ A React-based personal finance application built with TypeScript, focusing on ty
 ## Testing Guidelines
 
 ### Test Structure
+
 ```typescript
 // Use AAA pattern: Arrange, Act, Assert
 describe('ComponentName', () => {
   test('should do something when condition is met', () => {
     // Arrange
     const props = { ... };
-    
+
     // Act
     render(<Component {...props} />);
-    
+
     // Assert
     expect(screen.getByText('Expected text')).toBeInTheDocument();
   });
@@ -53,6 +59,7 @@ describe('ComponentName', () => {
 ```
 
 ### Testing Priorities
+
 1. **User Interactions**: Click, form submissions, navigation
 2. **Data Flow**: Props, state changes, API calls
 3. **Edge Cases**: Error states, loading states, empty states
@@ -61,6 +68,7 @@ describe('ComponentName', () => {
 ## Git Workflow
 
 ### Branch Strategy
+
 - `main`: Production-ready code
 - `develop`: Integration branch for features
 - `feature/*`: New features (e.g., `feature/add-expense-tracking`)
@@ -68,7 +76,9 @@ describe('ComponentName', () => {
 - `hotfix/*`: Critical production fixes
 
 ### Commit Messages
+
 Follow conventional commits format:
+
 ```
 type(scope): description
 
@@ -80,6 +90,7 @@ test(budget): add budget calculation tests
 ## Code Organization
 
 ### Folder Structure
+
 ```
 src/
 ├── components/          # Reusable UI components
@@ -95,6 +106,7 @@ src/
 ```
 
 ### Naming Conventions
+
 - **Components**: PascalCase (`ExpenseForm.tsx`)
 - **Hooks**: camelCase with `use` prefix (`useExpenseData.ts`)
 - **Utilities**: camelCase (`formatCurrency.ts`)
@@ -103,6 +115,7 @@ src/
 ## Commands
 
 ### Development
+
 ```bash
 npm run dev          # Start development server
 npm run build        # Build for production
@@ -110,6 +123,7 @@ npm run preview      # Preview production build
 ```
 
 ### Testing
+
 ```bash
 npm run test         # Run tests
 npm run test:watch   # Run tests in watch mode
@@ -117,6 +131,7 @@ npm run test:coverage # Run tests with coverage report
 ```
 
 ### Code Quality
+
 ```bash
 npm run lint         # Run ESLint
 npm run lint:fix     # Fix ESLint issues
@@ -125,6 +140,7 @@ npm run typecheck    # Run TypeScript checks
 ```
 
 ### CI/CD
+
 ```bash
 npm run ci           # Run full CI pipeline locally
 ```
@@ -132,6 +148,7 @@ npm run ci           # Run full CI pipeline locally
 ## Financial Data Types
 
 ### Core Entities
+
 ```typescript
 interface ExpenseItem {
   id: string;
@@ -152,6 +169,7 @@ interface BudgetItem {
 ```
 
 ## Performance Guidelines
+
 - Use React.memo for expensive components
 - Implement proper loading states
 - Use React.Suspense for code splitting
@@ -159,6 +177,7 @@ interface BudgetItem {
 - Keep bundle size minimal
 
 ## Security Considerations
+
 - Validate all user inputs
 - Sanitize data before display
 - Use secure HTTP-only cookies for authentication
@@ -166,6 +185,7 @@ interface BudgetItem {
 - Follow OWASP guidelines for web application security
 
 ## Accessibility
+
 - Maintain semantic HTML structure
 - Provide proper ARIA labels and roles
 - Ensure keyboard navigation works
@@ -173,6 +193,7 @@ interface BudgetItem {
 - Maintain color contrast ratios
 
 ## Notes
+
 - Always run tests before committing
 - Use feature flags for experimental features
 - Document complex business logic
