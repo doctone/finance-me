@@ -20,4 +20,19 @@ describe('App', () => {
     expect(screen.getByRole('link', { name: 'Expenses' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Budget' })).toBeInTheDocument();
   });
+
+  test('displays financial data', () => {
+    render(<App />);
+    expect(screen.getByText('Total Balance: $12,340.50')).toBeInTheDocument();
+    expect(screen.getByText('Monthly Income: $4,200.00')).toBeInTheDocument();
+    expect(screen.getByText('Monthly Expenses: $2,845.30')).toBeInTheDocument();
+    expect(screen.getByText('Savings Goal: 68%')).toBeInTheDocument();
+  });
+
+  test('displays recent transactions', () => {
+    render(<App />);
+    expect(screen.getByText('Recent Transactions')).toBeInTheDocument();
+    expect(screen.getByText('Grocery Store - $85.32')).toBeInTheDocument();
+    expect(screen.getByText('Salary Deposit + $4,200.00')).toBeInTheDocument();
+  });
 });
