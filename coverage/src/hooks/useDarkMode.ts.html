@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/pages/Expenses.tsx</title>
+    <title>Code coverage report for src/hooks/useDarkMode.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/pages</a> Expenses.tsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/hooks</a> useDarkMode.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/25</span>
+                <span class='fraction'>0/29</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/25</span>
+                <span class='fraction'>0/29</span>
             </div>
         
             
@@ -93,20 +93,10 @@
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -121,38 +111,57 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { useState, useEffect } from 'react';<span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span></span>
 &nbsp;
-const Expenses: React.FC = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;h1&gt;Expenses&lt;/h1&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;p&gt;Track and manage your expenses&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >export const useDarkMode = () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  const [isDarkMode, setIsDarkMode] = useState(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof window !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >      const stored = localStorage.getItem('darkMode');</span>
+<span class="cstat-no" title="statement not covered" >      if (stored) {</span>
+<span class="cstat-no" title="statement not covered" >        return JSON.parse(stored);</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >      return window.matchMedia('(prefers-color-scheme: dark)').matches;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+<span class="cstat-no" title="statement not covered" >  });</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;h2&gt;Expense Summary&lt;/h2&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;p&gt;This Month: $2,845.30&lt;/p&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;p&gt;Average Daily: $94.84&lt;/p&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;p&gt;Largest Expense: $1,200.00 (Rent)&lt;/p&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >  useEffect(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    const root = window.document.documentElement;</span>
+<span class="cstat-no" title="statement not covered" >    if (isDarkMode) {</span>
+<span class="cstat-no" title="statement not covered" >      root.classList.add('dark');</span>
+<span class="cstat-no" title="statement not covered" >    } else {</span>
+<span class="cstat-no" title="statement not covered" >      root.classList.remove('dark');</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));</span>
+<span class="cstat-no" title="statement not covered" >  }, [isDarkMode]);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;h2&gt;Recent Expenses&lt;/h2&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;ul&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;li&gt;Grocery Store - $85.32 (Food)&lt;/li&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;li&gt;Electric Bill - $124.56 (Utilities)&lt;/li&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;li&gt;Gas Station - $45.00 (Transportation)&lt;/li&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;li&gt;Netflix Subscription - $15.99 (Entertainment)&lt;/li&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;li&gt;Coffee Shop - $12.50 (Food)&lt;/li&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/ul&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
-  );
+<span class="cstat-no" title="statement not covered" >  const toggleDarkMode = () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    setIsDarkMode(!isDarkMode);</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return {</span>
+<span class="cstat-no" title="statement not covered" >    isDarkMode,</span>
+<span class="cstat-no" title="statement not covered" >    toggleDarkMode,</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
 <span class="cstat-no" title="statement not covered" >};</span>
-&nbsp;
-export default Expenses;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
